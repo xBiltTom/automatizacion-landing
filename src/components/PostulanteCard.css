@@ -1,0 +1,353 @@
+.postulante-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  margin-bottom: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.postulante-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nombre {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rol-badge {
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.rol-badge.web {
+  background: rgba(21, 101, 192, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.rol-badge.data {
+  background: rgba(106, 27, 154, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.rol-badge.cyber {
+  background: rgba(46, 125, 50, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.rol-badge.default {
+  background: rgba(97, 97, 97, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.vote-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  font-weight: 800;
+  font-size: 18px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vote-badge.high {
+  background: #4caf50;
+  color: white;
+}
+
+.vote-badge.medium {
+  background: #ff9800;
+  color: white;
+}
+
+.vote-badge.low {
+  background: #f44336;
+  color: white;
+}
+
+.estado-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.estado-badge.enviado {
+  background: #4caf50;
+  color: white;
+}
+
+.estado-badge.evaluar {
+  background: #ffc107;
+  color: #333;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2c3e50;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.info-item svg {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.info-item a {
+  color: #1565c0;
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.info-item.fecha {
+  color: #888;
+  font-size: 13px;
+}
+
+.fecha-label {
+  font-weight: 600;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.section-title svg {
+  color: #667eea;
+}
+
+.section-title h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.section-content {
+  color: #34495e;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 15px;
+}
+
+.section-content.resumen {
+  background: #fff9e6;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+  font-size: 15px;
+  line-height: 1.8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.habilidades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.habilidad-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef7 100%);
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+  transition: all 0.2s;
+}
+
+.habilidad-item:hover {
+  background: linear-gradient(135deg, #e8eef7 0%, #dce4f5 100%);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.habilidad-bullet {
+  color: #667eea;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.habilidad-text {
+  color: #2c3e50;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.consideracion {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #4caf50;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+}
+
+.consideracion .section-content {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: #1b5e20;
+  font-weight: 500;
+}
+
+.certificados-section {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ff9800;
+}
+
+.certificados-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.certificado-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+  border-radius: 8px;
+  border-left: 3px solid #ff9800;
+  transition: all 0.2s;
+}
+
+.certificado-item:hover {
+  background: linear-gradient(135deg, #ffe0b2 0%, #ffcc80 100%);
+  transform: translateX(4px);
+  box-shadow: 0 3px 10px rgba(255, 152, 0, 0.2);
+}
+
+.certificado-icon {
+  font-size: 20px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.certificado-text {
+  color: #e65100;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.info-section {
+  padding: 16px;
+  border-radius: 12px;
+  background: #fafafa;
+  transition: background 0.2s;
+}
+
+.info-section:hover {
+  background: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .postulante-card {
+    padding: 16px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  .nombre {
+    font-size: 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}

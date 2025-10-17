@@ -1,0 +1,154 @@
+.filter-bar {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 2px solid #e0e0e0;
+  transition: border-color 0.3s;
+}
+
+.filter-bar:hover {
+  border-color: #667eea;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.search-box:focus-within {
+  background: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+}
+
+.search-box svg {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.filter-group:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group svg {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.filter-select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  color: #2c3e50;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.filter-select:hover {
+  color: #667eea;
+}
+
+/* Pantallas medianas */
+@media (max-width: 992px) {
+  .filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .search-box {
+    padding: 12px 16px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .filter-group {
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .filter-select {
+    flex: 1;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-bar {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-box {
+    padding: 10px 14px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .filter-group {
+    padding: 8px 12px;
+  }
+
+  .filter-select {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,371 @@
+.table-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.postulantes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.postulantes-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.postulantes-table th {
+  padding: 18px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.postulantes-table th:nth-child(1) {
+  width: 120px;
+}
+
+.postulantes-table th:nth-child(2) {
+  width: auto;
+  min-width: 180px;
+}
+
+.postulantes-table th:nth-child(3) {
+  width: auto;
+  min-width: 160px;
+}
+
+.postulantes-table th:nth-child(4) {
+  width: 130px;
+  text-align: center;
+}
+
+.postulantes-table th:nth-child(5) {
+  width: 120px;
+  text-align: center;
+}
+
+.postulantes-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.postulantes-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.postulantes-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.postulantes-table td {
+  padding: 16px;
+  font-size: 15px;
+  color: #2c3e50;
+  vertical-align: middle;
+}
+
+.postulantes-table td:nth-child(4),
+.postulantes-table td:nth-child(5) {
+  text-align: center;
+}
+
+.fecha-cell {
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nombre-cell {
+  font-weight: 600;
+  color: #1a1a1a;
+  word-break: break-word;
+}
+
+.rol-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.rol-badge.rol-web {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.rol-badge.rol-data {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.rol-badge.rol-cyber {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.rol-badge.rol-default {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.vote-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 16px;
+  min-width: 60px;
+}
+
+.vote-badge.vote-high {
+  background: #4caf50;
+  color: white;
+}
+
+.vote-badge.vote-medium {
+  background: #ff9800;
+  color: white;
+}
+
+.vote-badge.vote-low {
+  background: #f44336;
+  color: white;
+}
+
+.btn-ver {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-ver:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-ver:active {
+  transform: translateY(0);
+}
+
+/* Paginación */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-top: 2px solid #e0e0e0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.pagination-info strong {
+  color: #667eea;
+  font-weight: 800;
+}
+
+.pagination-range {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1200px) {
+  .postulantes-table th,
+  .postulantes-table td {
+    padding: 14px 12px;
+    font-size: 14px;
+  }
+
+  .rol-badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .btn-ver {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 992px) {
+  .postulantes-table th:nth-child(1) {
+    width: 100px;
+  }
+
+  .postulantes-table th:nth-child(2) {
+    min-width: 150px;
+  }
+
+  .postulantes-table th,
+  .postulantes-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .rol-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .vote-badge {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .btn-ver {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .btn-ver span {
+    display: none;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .table-container {
+    border-radius: 12px;
+  }
+
+  .postulantes-table {
+    font-size: 12px;
+  }
+
+  .postulantes-table th,
+  .postulantes-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .postulantes-table th:nth-child(1) {
+    width: 80px;
+  }
+
+  .postulantes-table th:nth-child(2) {
+    min-width: 120px;
+  }
+
+  .postulantes-table th:nth-child(3) {
+    min-width: 120px;
+  }
+
+  .rol-badge {
+    font-size: 9px;
+    padding: 4px 8px;
+    letter-spacing: 0;
+  }
+
+  .vote-badge {
+    font-size: 13px;
+    padding: 5px 8px;
+    min-width: 45px;
+  }
+
+  .btn-ver {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .pagination-info {
+    order: -1;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+  .postulantes-table th,
+  .postulantes-table td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .fecha-cell {
+    font-size: 10px;
+  }
+
+  .rol-badge {
+    font-size: 8px;
+    padding: 3px 6px;
+  }
+
+  .vote-badge {
+    font-size: 12px;
+    padding: 4px 6px;
+    min-width: 40px;
+  }
+
+  .btn-ver {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
